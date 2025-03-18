@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INNOVEX NVX Аирдроп</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="images/innovex-logo.png" alt="INNOVEX Logo" class="logo">
+      <h1>INNOVEX NVX Аирдроп</h1>
+    </header>
+    
+    <div class="info-card">
+      <h2>О токене NVX</h2>
+      <p>INNOVEX запускает свой токен NVX на блокчейне TON. Примите участие в нашем аирдропе, чтобы получить свою долю токенов NVX!</p>
+    </div>
+    
+    <div class="wallet-section">
+      <h2>Подключите ваш TON кошелек</h2>
+      <p id="wallet-status">Не подключен</p>
+      <button id="connect-wallet-btn" class="primary-btn">Подключить кошелек</button>
+    </div>
+    
+    <div class="tasks-section">
+      <h2>Выполните задания для участия</h2>
+      <div class="task-list">
+        <div class="task-item">
+          <input type="checkbox" id="task1" class="task-checkbox">
+          <label for="task1">Подписаться на INNOVEX в Twitter</label>
+          <a href="https://twitter.com/innovex_official" target="_blank" class="task-link">Перейти</a>
+        </div>
+        <div class="task-item">
+          <input type="checkbox" id="task2" class="task-checkbox">
+          <label for="task2">Присоединиться к группе INNOVEX в Telegram</label>
+          <a href="https://t.me/innovex_community" target="_blank" class="task-link">Перейти</a>
+        </div>
+        <div class="task-item">
+          <input type="checkbox" id="task3" class="task-checkbox">
+          <label for="task3">Подписаться на INNOVEX в Discord</label>
+          <a href="https://discord.gg/innovex" target="_blank" class="task-link">Перейти</a>
+        </div>
+        <div class="task-item">
+          <input type="checkbox" id="task4" class="task-checkbox">
+          <label for="task4">Ретвитнуть анонс аирдропа</label>
+          <a href="https://twitter.com/innovex_official/status/1234567890" target="_blank" class="task-link">Перейти</a>
+        </div>
+        <div class="task-item">
+          <input type="checkbox" id="task5" class="task-checkbox">
+          <label for="task5">Подписаться на рассылку INNOVEX</label>
+          <button id="newsletter-btn" class="task-btn">Подписаться</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="newsletter-modal" id="newsletter-modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Подпишитесь на нашу рассылку</h2>
+        <form id="newsletter-form">
+          <input type="email" placeholder="Ваш email адрес" required>
+          <button type="submit" class="primary-btn">Подписаться</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="submit-section">
+      <button id="submit-tasks-btn" class="primary-btn" disabled>Отправить и получить токены NVX</button>
+    </div>
+    
+    <div class="status-section">
+      <h2>Ваш статус аирдропа</h2>
+      <div class="status-container">
+        <p>Выполнено заданий: <span id="tasks-completed">0/5</span></p>
+        <p>Кошелек подключен: <span id="wallet-connected">❌</span></p>
+        <p>Статус участия: <span id="eligibility-status">Не имеете права</span></p>
+      </div>
+    </div>
+    
+    <footer>
+      <p>© 2025 INNOVEX. Все права защищены.</p>
+      <p>Работает на блокчейне TON</p>
+    </footer>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
